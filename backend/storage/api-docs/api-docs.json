@@ -1,0 +1,193 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "MobileHub",
+        "description": "API para aplicacion de gestion de codigo fuente.",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/auth/login": {
+            "post": {
+                "summary": "Iniciar sesión y obtener un token JWT.",
+                "operationId": "535ffeda4b78916efd658b2844ea897a",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Inicio de sesión exitoso. Se devuelve un token JWT."
+                    },
+                    "400": {
+                        "description": "Credenciales inválidas. Esto puede suceder si la contraseña es incorrecta."
+                    },
+                    "404": {
+                        "description": "Usuario no encontrado. No existe un usuario con el nombre proporcionado."
+                    },
+                    "500": {
+                        "description": "Error de token. Problema al generar o manejar el token JWT."
+                    }
+                }
+            }
+        },
+        "/api/auth/register": {
+            "post": {
+                "summary": "Registrar un nuevo usuario y obtener un token JWT.",
+                "operationId": "da8643013c2941f5ed7f8a9c9b4a7f7a",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "last_name": {
+                                        "type": "string"
+                                    },
+                                    "dni": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Registro exitoso. Se devuelve un token JWT."
+                    },
+                    "400": {
+                        "description": "Datos inválidos o usuario ya existe."
+                    }
+                }
+            }
+        },
+        "/api/auth/logout": {
+            "post": {
+                "summary": "Cerrar sesión y invalidar el token JWT actual.",
+                "operationId": "46f8a14c8083abb69eed72768aa08629",
+                "responses": {
+                    "200": {
+                        "description": "Cierre de sesión exitoso."
+                    },
+                    "500": {
+                        "description": "Fallo al cerrar sesión."
+                    }
+                }
+            }
+        },
+        "/api/auth/change-password": {
+            "put": {
+                "summary": "Cambiar la contraseña de un usuario.",
+                "operationId": "99c31f67d080322ab8d71772421b5ace",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "current_password": {
+                                        "type": "string"
+                                    },
+                                    "new_password": {
+                                        "type": "string"
+                                    },
+                                    "new_password_confirmation": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Contraseña cambiada con éxito."
+                    },
+                    "400": {
+                        "description": "Datos inválidos o contraseña actual incorrecta."
+                    },
+                    "500": {
+                        "description": "Error del servidor."
+                    }
+                }
+            }
+        },
+        "/api/auth/update-profile": {
+            "put": {
+                "summary": "Actualizar la información del perfil del usuario.",
+                "description": "Permite a los usuarios autenticados actualizar su nombre completo, correo electrónico y año de nacimiento.",
+                "operationId": "401371d1ca25a80b4f6d4f501f48196b",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "full_name": {
+                                        "type": "string",
+                                        "example": "Juan Perez"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "juan.perez@ucn.cl"
+                                    },
+                                    "birthday": {
+                                        "type": "string",
+                                        "format": "date",
+                                        "example": "1990-01-01"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Perfil actualizado con éxito."
+                    },
+                    "400": {
+                        "description": "Datos inválidos."
+                    },
+                    "401": {
+                        "description": "No autorizado."
+                    },
+                    "500": {
+                        "description": "Error del servidor."
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        }
+    }
+}
