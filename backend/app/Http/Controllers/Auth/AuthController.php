@@ -17,7 +17,7 @@ class AuthController extends Controller
 {
     /**
      * @OA\Post(
-     *     path="/api/auth/login",
+     *     path="/api/auth/login",D
      *     summary="Iniciar sesión y obtener un token JWT.",
      *     @OA\RequestBody(
      *         required=true,
