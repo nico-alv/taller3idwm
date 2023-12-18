@@ -1,8 +1,9 @@
 # Taller N°3 - MobileHub
 
-[![Image from Gyazo](https://i.gyazo.com/d583f9515331b027cf7b3ff47b8bfe70.gif)](https://gyazo.com/d583f9515331b027cf7b3ff47b8bfe70)
+[![Image from Gyazo](https://i.gyazo.com/864ab76610f86adcb95f9c32eeb35184.gif)](https://gyazo.com/864ab76610f86adcb95f9c32eeb35184)
 
 Solución para el tercer taller de la asignatura de introducción al desarrollo web móvil en la cual se pide realizar un sistema de gestión de codigo para cuentas del dominio de la universidad.
+- Documentado con swagger para el backend y JSDoc para el frontend mobile.
 
 ----
 
@@ -90,9 +91,6 @@ npm run start
 ----
 
 #### Uso
-- Para entrar al frontend accede a http://localhost:3000.
+- Para entrar al frontend utiliza Android Studio o la aplicación de Expo Go.
 - Para probar la API separadamente, puedes utilizar Postman o herramientas similares.
 
-#### Notas
-- Se implementó una documentación de la API con swagger, para acceder a esta, se debe ingresar al siguiente endpoint:
-http://127.0.0.1:8000/api/documentation

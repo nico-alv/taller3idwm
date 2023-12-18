@@ -56,6 +56,7 @@ const ProfileScreen = ({ navigation }) => {
     }
   };
 
+  
   /**
    * Maneja el cierre de sesión del usuario.
    */
