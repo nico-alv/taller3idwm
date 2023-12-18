@@ -24,7 +24,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"nombre_usuario\",\r\n    \"password\": \"contraseña_usuario\"\r\n}\r\n",
+					"raw": "{\r\n    \"email\": \"correo@ucn.cl\",\r\n    \"password\": \"contraseñaSegura123\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -32,13 +32,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/login",
+					"raw": "http://192.168.0.26:8000/api/login",
 					"protocol": "http",
 					"host": [
-						"127",
+						"192",
+						"168",
 						"0",
-						"0",
-						"1"
+						"26"
 					],
 					"port": "8000",
 					"path": [
@@ -79,7 +79,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Nombre\",\r\n    \"last_name\": \"Apellido\",\r\n    \"dni\": \"12345678\",\r\n    \"email\": \"correo@ejemplo.com\",\r\n    \"password\": \"contraseñaSegura123\"\r\n}\r\n",
+					"raw": "{\r\n    \"email\": \"correo@ucn.cl\",\r\n    \"dni\": \"20936459-K\",\r\n    \"full_name\": \"Nombre de ejemplo\",\r\n    \"birthday\": \"28-11-2001\",\r\n    \"password\": \"contraseñaSegura123\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -87,13 +87,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/register",
+					"raw": "http://192.168.0.26:8000/api/register",
 					"protocol": "http",
 					"host": [
-						"127",
+						"192",
+						"168",
 						"0",
-						"0",
-						"1"
+						"26"
 					],
 					"port": "8000",
 					"path": [
@@ -152,13 +152,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/change-password",
+					"raw": "http://192.168.0.26:8000/api/change-password",
 					"protocol": "http",
 					"host": [
-						"127",
+						"192",
+						"168",
 						"0",
-						"0",
-						"1"
+						"26"
 					],
 					"port": "8000",
 					"path": [
@@ -200,7 +200,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzAyODQ2NzAwLCJleHAiOjE3MDI4NTAzMDAsIm5iZiI6MTcwMjg0NjcwMCwianRpIjoiV0duWHM5YnNnUklyZUwyTiIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.8dorwk_SkJmxyRVWzB__1Vnrm56flq2xZx9iiy1Q0DE",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzAyODQ3MDEyLCJleHAiOjE3MDI4NTA2MTIsIm5iZiI6MTcwMjg0NzAxMiwianRpIjoiRjluRVBMSmNmNHd6Q0NsdCIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.K8bfdQlWpy7YkfOpquGZ0-YHxVJl-TuYGWscVVmG-sM",
 							"type": "string"
 						}
 					]
@@ -217,13 +217,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/update-profile",
+					"raw": "http://192.168.0.26:8000/api/update-profile",
 					"protocol": "http",
 					"host": [
-						"127",
+						"192",
+						"168",
 						"0",
-						"0",
-						"1"
+						"26"
 					],
 					"port": "8000",
 					"path": [
@@ -273,7 +273,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "{{token}}",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTkyLjE2OC4wLjI2OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzAyODY0Mzk2LCJleHAiOjE3MDI4Njc5OTYsIm5iZiI6MTcwMjg2NDM5NiwianRpIjoiSUdYYmdxZXpWUHVkSFpoTyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.u3GRkBJTdnjvisgTAZ1KOboNUhTSLyX_qRAseoawz9g",
 							"type": "string"
 						}
 					]
@@ -281,13 +281,13 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/logout",
+					"raw": "http://192.168.0.26:8000/api/logout",
 					"protocol": "http",
 					"host": [
-						"127",
+						"192",
+						"168",
 						"0",
-						"0",
-						"1"
+						"26"
 					],
 					"port": "8000",
 					"path": [
