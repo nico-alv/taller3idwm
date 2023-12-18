@@ -85,8 +85,9 @@ GITHUB_API_KEY=token
 ```
 Arrancar el frontend.
 ```bash
-npm run start
+npm start
 ```
+Escanear el QR o apretar la tecla **A** para abrir Android studio.
 
 ----
 
